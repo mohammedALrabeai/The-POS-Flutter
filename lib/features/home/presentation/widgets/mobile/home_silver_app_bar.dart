@@ -92,7 +92,7 @@ class HomeSilverAppBar extends SliverAppBar {
     return ElevatedButton(
       onPressed: onBarCodeButtonPressed ?? () {},
       style: ElevatedButton.styleFrom(
-        primary: Colors.transparent,
+        backgroundColor: Colors.transparent,
         shadowColor: Colors.transparent,
       ),
       child: SvgPicture.asset(

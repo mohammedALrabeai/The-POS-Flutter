@@ -68,17 +68,17 @@ class _CartViewState extends State<CartView> {
                       borderRadius: BorderRadius.circular(5.0)),
                     child: DropdownSearch<DropListItem>(
                       //mode of dropdown
-                      mode: Mode.MENU,
-                      //to show search box
-                      showSearchBox: true,
-                      isFilteredOnline: true,
-                      onFind: (String? value) => customerController.onSearch(value!),
-                      showSelectedItems: true,
-                      dropDownButton: const Icon(
-                        Icons.account_circle_outlined,
-                        color: Color(0xffF79624),
-                        size: 30,
-                      ),
+                      // mode: Mode.MENU,
+                      // //to show search box
+                      // showSearchBox: true,
+                      // isFilteredOnline: true,
+                      // onFind: (String? value) => customerController.onSearch(value!),
+                      // showSelectedItems: true,
+                      // dropDownButton: const Icon(
+                      //   Icons.account_circle_outlined,
+                      //   color: Color(0xffF79624),
+                      //   size: 30,
+                      // ),
                       //list of dropdown items
                       onChanged: (DropListItem? customer) {
                         if (customer != null) {
@@ -91,18 +91,18 @@ class _CartViewState extends State<CartView> {
                       },
                       //show selected item
                       selectedItem: cartsController.listCarts[cartsController.selectedCart.value].customer,
-                      hint: "... اختر العميل",
-                      dropdownSearchDecoration: const InputDecoration(
-                          border: InputBorder.none,
-                          disabledBorder: InputBorder.none,
-                          enabledBorder: InputBorder.none,
-                          contentPadding: EdgeInsets.zero),
+                      // hint: "... اختر العميل",
+                      // dropdownSearchDecoration: const InputDecoration(
+                      //     border: InputBorder.none,
+                      //     disabledBorder: InputBorder.none,
+                      //     enabledBorder: InputBorder.none,
+                      //     contentPadding: EdgeInsets.zero),
                       compareFn: (item, selectedItem) {
                         return item != null &&
                             selectedItem != null &&
                             (item == selectedItem);
                       },
-                      popupItemBuilder: _customPopupItemBuilder,
+                      // popupItemBuilder: _customPopupItemBuilder,
                       dropdownBuilder: _customDropDown,
                     ),
                   ),
@@ -199,8 +199,8 @@ class _CartViewState extends State<CartView> {
                       cartsController.pay();
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: const Color(0xff178f49), // background
-                      onPrimary: const Color(0xffF79624),
+                      backgroundColor: const Color(0xff178f49), // background
+                      // onPrimary: const Color(0xffF79624),
                       // foreground
                     ),
                     child: cartsController.isPayLoading.value

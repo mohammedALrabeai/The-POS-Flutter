@@ -31,15 +31,13 @@ class MyApp extends StatelessWidget {
       locale: LocalizationService.locale,
       navigatorKey: navigatorKey,
       translations: LocalizationService(),
-      builder: (context, widget) => ResponsiveWrapper.builder(
-        widget,
-        maxWidth: 1200,
-        minWidth: 480,
-        defaultScale: true,
+      builder: (context, widget) => ResponsiveBreakpoints.builder(
+        child: widget!,
         breakpoints: [
-          const ResponsiveBreakpoint.resize(480, name: MOBILE),
-          const ResponsiveBreakpoint.autoScale(800, name: TABLET),
-          const ResponsiveBreakpoint.resize(1000, name: DESKTOP),
+          const Breakpoint(start: 0, end: 450, name: MOBILE),
+          const Breakpoint(start: 451, end: 800, name: TABLET),
+          const Breakpoint(start: 801, end: 1920, name: DESKTOP),
+          const Breakpoint(start: 1921, end: double.infinity, name: '4K'),
         ],
       ),
       theme: ThemeData(

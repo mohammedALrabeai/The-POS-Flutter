@@ -101,7 +101,7 @@ class EditCartItemViewState extends State<EditCartItemView> {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          primary: color,
+          backgroundColor: color,
         ),
         child: SizedBox(
           height: 50,

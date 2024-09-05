@@ -154,7 +154,7 @@ class AddCustomerWidget extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        primary: errorValidateMessage.value.isEmpty
+        backgroundColor: errorValidateMessage.value.isEmpty
             ? const Color(0xff178f49)
             : const Color(0xff178f49),
         shadowColor: Colors.transparent,

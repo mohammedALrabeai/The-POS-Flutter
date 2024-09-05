@@ -18,8 +18,8 @@ class CartItemProductWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Slidable(
-      actionPane: SlidableDrawerActionPane(),
-      actionExtentRatio: 0.25,
+      // actionPane: SlidableDrawerActionPane(),
+      // actionExtentRatio: 0.25,
       child: ListTile(
           onTap: () async {
             await showModalSideSheet(
@@ -94,17 +94,17 @@ class CartItemProductWidget extends StatelessWidget {
                   fontWeight: FontWeight.w600),
             ),
           )),
-      secondaryActions: <Widget>[
-        IconSlideAction(
-          caption: 'حذف',
-          color: Colors.red,
-          icon: Icons.delete,
-          onTap: () {
-            cartsController.deleteItem(item);
-            refresh();
-          },
-        ),
-      ],
+      endActionPane:ActionPane(motion:  const ScrollMotion(), children: <Widget>[
+        // IconSlideAction(
+        //   caption: 'حذف',
+        //   color: Colors.red,
+        //   icon: Icons.delete,
+        //   onTap: () {
+        //     cartsController.deleteItem(item);
+        //     refresh();
+        //   },
+        // ),
+      ], )
     );
   }
 }
